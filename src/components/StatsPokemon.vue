@@ -44,16 +44,16 @@ export default {
 <template>
   <div>
     <h2 class="text-base font-semibold capitalize">Stats</h2>
-    <div class="flex flex-col items-center justify-center mt-2">
+    <div class="flex flex-col items-center justify-center mt-2 gap-2.5">
       <div
         v-for="(stat, index) in pokemon.stats"
         :key="index"
         class="flex items-center w-full h-full gap-2"
       >
-        <h2 class="w-2/5 capitalize">
+        <h2 class="w-2/5 capitalize text-white/60">
           {{ formatStatName(stat.stat.name) }}
         </h2>
-        <span class="w-1/5">{{ stat.base_stat }}</span>
+        <span class="w-1/5 font-semibold">{{ stat.base_stat }}</span>
         <div class="w-full bg-gray-200 rounded-md">
           <div
             :style="{
