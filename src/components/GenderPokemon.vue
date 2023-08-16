@@ -27,18 +27,18 @@ export default {
 
       const results = [];
 
-      if (femaleMatch) {
-        results.push({
-          id: "female",
-          text: this.femalePokemon.name,
-          style: this.femaleStyle,
-        });
-      }
       if (maleMatch) {
         results.push({
           id: "male",
           text: this.malePokemon.name,
           style: this.maleStyle,
+        });
+      }
+      if (femaleMatch) {
+        results.push({
+          id: "female",
+          text: this.femalePokemon.name,
+          style: this.femaleStyle,
         });
       }
       if (genderlessMatch) {
@@ -108,7 +108,7 @@ export default {
 
 <template>
   <div
-    class="flex flex-col items-center justify-center h-24 gap-1 px-5 py-3 rounded-md shadow-lg w-28 bg-black/40 shadow-black/50"
+    class="flex flex-col items-center justify-center w-24 h-20 gap-1 px-5 py-3 rounded-md shadow-lg bg-black/40 shadow-black/50"
   >
     <h2 class="font-semibold">Gender</h2>
     <div>

@@ -10,7 +10,7 @@
       {{ formatNextPokemonId }}
       <i class="material-icons">chevron_right</i>
     </span>
-    <span class="text-sm capitalize">
+    <span class="text-sm font-semibold capitalize">
       {{ nextPokemonName }}
     </span>
   </router-link>

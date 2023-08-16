@@ -1,28 +1,27 @@
 <template>
-  <div class="flex flex-row justify-between gap-10">
+  <div class="flex flex-row flex-wrap justify-center gap-4">
     <div
       v-for="(evolution, index) in evolutions"
       :key="index"
-      class="flex items-center justify-center flex-col"
+      class="flex flex-col items-center justify-center"
     >
-      <div
-        class="flex justify-center items-center bg-yellow-100/80 border-2 border-orange-500 border-solid rounded-full w-24 h-24"
-      >
-        <img
-          :src="getSpriteUrl(evolution.species.url)"
-          :alt="evolution.species.name"
-          class="object-cover w-2/4"
-        />
-      </div>
-      <div class="flex flex-row gap-x-1">
-        <span class="capitalize font-semibold">
-          {{ evolution.species.name }}
-        </span>
-        <span class="text-gray-100/50 font-semibold">
-          #{{ String(getPokemonId(evolution.species.url)).padStart(3, "0") }}
-        </span>
-      </div>
-      <div class="flex items-center justify-center gap-2 mt-2">
+      <router-link :to="'/detail/' + getPokemonId(evolution.species.url)">
+        <div class="flex items-center justify-center w-20 h-20">
+          <img
+            :src="getSpriteUrl(evolution.species.url)"
+            :alt="evolution.species.name"
+            class="object-cover w-2/4"
+          />
+        </div>
+        <div class="flex flex-row gap-x-1">
+          <span class="font-semibold capitalize">
+            {{ evolution.species.name }}
+          </span>
+          <span class="font-semibold text-gray-100/50">
+            #{{ String(getPokemonId(evolution.species.url)).padStart(3, "0") }}
+          </span>
+        </div>
+        <!-- <div class="flex items-center justify-center gap-2 mt-2">
         <div
           v-for="(item, index) in pokemonTypes"
           :key="index"
@@ -32,7 +31,8 @@
             {{ item.type.name }}
           </span>
         </div>
-      </div>
+      </div> -->
+      </router-link>
     </div>
   </div>
 </template>

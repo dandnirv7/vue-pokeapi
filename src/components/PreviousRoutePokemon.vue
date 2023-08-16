@@ -10,7 +10,7 @@
       <i class="material-icons">chevron_left</i>
       {{ formatPreviousPokemonId }}
     </span>
-    <span class="text-sm capitalize">
+    <span class="text-sm font-semibold capitalize">
       {{ previousPokemonName }}
     </span>
   </router-link>

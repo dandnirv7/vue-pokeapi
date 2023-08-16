@@ -1,6 +1,10 @@
 <template>
   <div>
-    <span v-for="story in storyPokemon" :key="story">
+    <span
+      v-for="story in storyPokemon"
+      :key="story"
+      class="leading-3 tracking-tighter font-outfit"
+    >
       {{ story.flavor_text }}
     </span>
   </div>

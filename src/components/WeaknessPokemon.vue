@@ -77,7 +77,7 @@ export default {
     <div class="flex flex-wrap gap-2.5">
       <div v-for="(uniqueType, index) in upperHalf" :key="index">
         <span
-          class="px-2 py-1 font-semibold capitalize rounded-lg w-max text-start"
+          class="px-2 py-1 text-sm font-semibold capitalize border border-white border-solid rounded-lg w-max text-start"
           :class="getBackgroundColor(uniqueType.name)"
           >{{ uniqueType.name }}</span
         >
@@ -86,7 +86,7 @@ export default {
     <div class="flex flex-wrap gap-2.5 mt-4">
       <div v-for="(uniqueType, index) in lowerHalf" :key="index">
         <span
-          class="px-2 py-1 font-semibold capitalize rounded-lg w-max text-start"
+          class="px-2 py-1 text-sm font-semibold capitalize border border-white border-solid rounded-lg w-max text-start"
           :class="getBackgroundColor(uniqueType.name)"
           >{{ uniqueType.name }}</span
         >

@@ -44,7 +44,7 @@ export default {
 <template>
   <div>
     <h2 class="text-base font-semibold capitalize">Stats</h2>
-    <div class="flex flex-col items-center justify-center mt-2 gap-2.5">
+    <div class="flex flex-col items-center justify-center gap-1 mt-2">
       <div
         v-for="(stat, index) in pokemon.stats"
         :key="index"
