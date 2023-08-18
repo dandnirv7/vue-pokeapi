@@ -1,16 +1,12 @@
 <template>
   <div class="flex flex-row flex-wrap justify-center gap-4">
-    <div
-      v-for="(evolution, index) in evolutions"
-      :key="index"
-      class="flex flex-col items-center justify-center"
-    >
+    <div v-for="(evolution, index) in evolutions" :key="index">
       <router-link :to="'/detail/' + getPokemonId(evolution.species.url)">
-        <div class="flex items-center justify-center w-20 h-20">
+        <div class="flex justify-center w-24 mx-auto h-20 mb-1">
           <img
             :src="getSpriteUrl(evolution.species.url)"
             :alt="evolution.species.name"
-            class="object-cover w-2/4"
+            class="object-fit"
           />
         </div>
         <div class="flex flex-row gap-x-1">
